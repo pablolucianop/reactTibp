@@ -18,7 +18,7 @@ function App() {
         >
           Learn React
         </a>
-      <Hola modo={'keke'} estilo='oscuro'/>
+      <Hola modo={'keke'} lista={[1,2,3]} estilo={'oscuro'}/>
       </header>
     </div>
   );
@@ -35,7 +35,10 @@ function Hola(props) {
           <p>buenos dias senior</p>
         )
     }
-
+    {
+      props.lista.map(nro => {
+       return (<p>{nro}</p>)
+    })}
     </div>
   )
 }
