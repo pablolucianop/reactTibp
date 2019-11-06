@@ -19,7 +19,9 @@ function App() {
         >
           Learn React
         </a>
-      <Hola modo={'keke'} estilo='oscuro'/>
+      <Hola modo={'keke'} lista={[1,2,3]} estilo={'oscuro'}/>
+
+      <Holi modo={'sarasasa'} lista={['a','b','c']} estilo={'negro'}/>
       </header>
     </div>
   );
@@ -47,12 +49,6 @@ function Hola(props) {
       <button onClick={cambiar}>Cambiar</button>
       <button onClick={reiniciar}>Reiniciar</button>
     </div>
-  )
-}
-
-function Parte(props) {
-  return (
-    <h1>{props.veces}</h1>
   )
 }
 
