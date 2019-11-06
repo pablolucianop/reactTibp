@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+
 
 function App() {
   return (
@@ -25,18 +26,35 @@ function App() {
 }
 
 function Hola(props) {
+  const [Veces, cambiarVeces] = useState(0)
+  const cambiar = () => {
+    cambiarVeces(Veces + 1)
+  }
+  const reiniciar = () => {
+    cambiarVeces(0)
+  }
   return(
     <div>
-    Hola amigou 
-    {
-      props.modo === 'teens' ? (
-        <p>hola chicos</p>
-      ) : (
-          <p>buenos dias senior</p>
-        )
-    }
-
+      Hola amigou
+      {
+        props.modo === 'teens' ? (
+          <p>hola chicos</p>
+        ) : (
+            <p>buenos dias senior</p>
+          )
+      }
+      <p>veces apretado {Veces}</p>
+      <button onClick={cambiar}>Cambiar</button>
+      <button onClick={reiniciar}>Reiniciar</button>
     </div>
   )
 }
+
+function Parte(props) {
+  return (
+    <h1>{props.veces}</h1>
+  )
+}
+
 export default App;
+
