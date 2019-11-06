@@ -19,6 +19,8 @@ function App() {
           Learn React
         </a>
       <Hola modo={'keke'} lista={[1,2,3]} estilo={'oscuro'}/>
+
+      <Holi modo={'sarasasa'} lista={['a','b','c']} estilo={'negro'}/>
       </header>
     </div>
   );
@@ -38,8 +40,30 @@ function Hola(props) {
     {
       props.lista.map(nro => {
        return (<p>{nro}</p>)
-    })}
+    })
+    }
     </div>
   )
 }
+
+function Holi(props) {
+  return(
+    <div>
+    Holi wachin 
+    {
+      props.modo === 'sarasa' ? (
+        <p>hola sarasa</p>
+      ) : (
+          <p>hola no sarasa</p>
+        )
+    }
+    {
+      props.lista.map(letra => {
+       return (<p>{letra}</p>)
+    })
+    }
+    </div>
+  )
+}
+
 export default App;
